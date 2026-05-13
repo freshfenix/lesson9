@@ -15,25 +15,25 @@
       <div class="container">
         <nav class="nav">
           <ul class="nav__list">
-            <li><a class="nav__link active" href="#">home</a></li>
+            <li><a class="nav__link nav__link--active" href="#">home</a></li>
             <li><a class="nav__link" href="#">about</a></li>
             <li><a class="nav__link" href="#">works</a></li>
             <li><a class="nav__link" href="#">process</a></li>
             <li><a class="nav__link" href="#">contacts</a></li>
           </ul>
         </nav>
-
-        <div class="header__content">
-
-          <h1 class="header__title">Design and Layout</h1>
-          <p class="info__text">Lorem Ipsum is a placeholder text commonly used in printing and web design. Lorem
-            Ipsum has been the
-            standard dummy text for Latin scripts since the 16th century.</p>
-          <button class="header__btn">write to me</button>
-        </div>
       </div>
     </header>
     <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero__title">Design and Layout</h1>
+          <p class="info__text">Lorem Ipsum is a placeholder text commonly used in printing and web design. Lorem
+            Ipsum has been the
+            standard dummy text for Latin scripts since the 16th century.</p>
+          <button class="hero__btn">write to me</button>
+        </div>
+      </section>
       <section class="about">
         <div class="container about__container">
           <h2 class="about__title">About Me</h2>
@@ -81,7 +81,7 @@
             standard dummy text for Latin scripts since the 16th century.</p>
 
           <div class="video-wrapper">
-            <video class="video" controls muted poster="src/images/Rectangle-5.webp">
+            <video class="video" preload="metadata" controls muted poster="src/images/Rectangle-5.webp">
               <source src="src/images/coding.mp4" type="video/mp4">
             </video>
             <button class="play-btn" type="button" aria-label="Play video"></button>
