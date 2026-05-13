@@ -64,21 +64,31 @@ body {
   flex-wrap: wrap;
 }
 
+.nav__list li {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.5s linear;
+}
+
+.nav__list li:hover {
+  border-bottom: 1px solid var(--brand-color);
+}
+
 .nav__link {
   color: var(--black-color);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  transition: color 0.3s linear;
+  transition: all 0.5s linear;
+  display: inline-block;
 }
 .nav__link--active {
   color: var(--brand-color);
   font-weight: 500;
 }
 
-.nav__link:hover,
-.nav__link:focus-visible {
+.nav__link:hover {
   color: var(--brand-color);
+  transform: translateY(-3px);
 }
 
 /* HERO */
@@ -111,14 +121,24 @@ body {
   background: var(--brand-color);
   color: var(--white-color);
   text-transform: uppercase;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   letter-spacing: 0.1em;
+  transition:
+    background-color 0.3s linear,
+    color 0.5s linear,
+    box-shadow 0.5s linear;
 }
 
 .hero__btn:active {
   border: 1px solid var(--white-color);
 }
 
+.hero__btn:hover {
+  background: var(--white-color);
+  color: var(--brand-color);
+  /* border: 1px solid transparent; */
+  box-shadow: #04237a4d -11px 10px 6px 1px;
+}
 /* ABOUT, PROCESS*/
 .about {
   background-color: var(--white-color);
@@ -152,18 +172,56 @@ body {
   padding: 100px 0;
 }
 
+.projects__container {
+  overflow: hidden;
+  display: flex;
+  gap: 45px;
+  position: relative;
+}
+
+.projects__container::before,
+.projects__container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--brand-color) 0%,
+    rgba(52, 84, 122, 0) 100%
+  );
+}
+.projects__container::before {
+  left: 0;
+}
+.projects__container::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
 .projects__list {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 45px;
-  overflow-x: auto;
+  animation: slide 15s linear 2s infinite;
 }
 
 .projects__item {
   color: var(--white-color);
   position: relative;
   padding-left: 70px;
+  text-transform: lowercase;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 22.5px));
+  }
 }
 
 .projects__item::before {
