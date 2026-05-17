@@ -484,4 +484,7 @@ body {
   .hero__btn {
     padding: 13px 35px;
   }
+  html {
+    scroll-padding-top: 70px;
+  }
 }
