@@ -171,7 +171,6 @@ body {
 
 /* BURGER */
 .burger {
-  position: fixed;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -449,7 +448,7 @@ body {
   }
 
   .header {
-    padding: 35px 0;
+    padding: 20px 0;
   }
   .nav {
     display: flex;
@@ -485,6 +484,6 @@ body {
     padding: 13px 35px;
   }
   html {
-    scroll-padding-top: 70px;
+    scroll-padding-top: 40px;
   }
 }
