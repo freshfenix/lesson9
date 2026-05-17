@@ -83,8 +83,9 @@ body {
   padding: 35px 0;
 }
 
-/* .nav {
-} */
+.nav {
+  align-items: center;
+}
 .nav__list {
   display: flex;
   gap: var(--gap-md);
@@ -447,10 +448,12 @@ body {
     font-size: 26px;
   }
 
+  .header {
+    padding: 35px 0;
+  }
   .nav {
     display: flex;
     justify-content: flex-end;
-    padding: 30px 0;
   }
 
   .burger {
